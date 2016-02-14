@@ -1,0 +1,122 @@
+<!doctype html>
+<head>
+    <title>Puzzle Maker</title>
+    <!-- AngularJS library links -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+    <script src="/static/js/ui-bootstrap-tpls-0.14.3.min.js"></script>
+    
+    <!-- JQuery library link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      
+    <!-- Link to script with custom module, controllers, and directives -->  
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+      
+    <!-- Bootstrap -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    
+    <style>
+        div.loading {
+            background-color: #294990;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col-lg-12">
+                <h2 class="page-header">Gallery<br>
+            <small>Choose from our gallery of images</small></h1>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="/static/library/img1.stl">
+                    <img class="img-responsive" src="/static/img/img1.png" alt="">
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="/static/library/img2.stl">
+                    <img class="img-responsive" src="/static/img/img2.png" alt="">
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="/static/library/img3.stl">
+                    <img class="img-responsive" src="/static/img/img3.png" alt="">
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="/static/img/img4.png" alt="">
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="/static/img/img5.png" alt="">
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="/static/img/img6.png" alt="">
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="/static/img/img7.png" alt="">
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="/static/img/img8.png" alt="">
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="/static/img/img9.png" alt="">
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="/static/img/img10.png" alt="">
+                </a>
+            </div>
+        <div class="col-lg-12">
+        <h2 class="page-header">Upload a PNG file to make your own</h1> 
+        </div>
+        <div class="col-lg-6">
+            <img class="img-responsive" src="/static/img/image-specs.png">
+        </div>
+        <div class="col-lg-6">
+            <h3>Instructions</h3>
+            <p>Your image file should meet the following criteria to ensure a workable STL file:
+            <li>Should contain distinct and solid colors</li>
+            <li>Should contain no gradients</li>
+            <li>Clear black borders work best</li>
+            <li><strong>Must</strong> be a .PNG image file</li>
+            <li><strong>Must</strong> be exactly 500x500 px in size</li></p>
+            <hr>
+<!--            <form action="/puzzle/upload" method="post" enctype="multipart/form-data">-->
+            <form action="" method="post" enctype="multipart/form-data">
+            <input class="btn" type="file" name="file"><br><br>
+            <input class="btn btn-primary btn-lg" type="submit" value="UPLOAD FILE" data-toggle="modal" data-target="#in-process" data-backdrop="static" data-keyboard="false">
+            </form>
+            
+            <div class="modal fade" id="in-process" tabindex="-1"role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header loading">
+                            <h3 class="modal-title">Converting...</h4>
+                        </div>
+                        <div class="modal-body loading">
+                            <center>
+                                <img src="/static/svg-loaders/grid.svg" />
+                                <h4>Your image is being processed and converted into an .STL for your 3D printing needs. Your download will be ready shortly.</h3>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
